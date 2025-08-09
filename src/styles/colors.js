@@ -28,4 +28,9 @@ export const colors = {
             active: "#6d6d6d"
         },
     },
+    neutral: {
+        50: "#eaeced",
+        100: "#bec3c7",
+        200: "#9fa6ac",
+    }
 };

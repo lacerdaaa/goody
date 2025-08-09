@@ -1,12 +1,13 @@
 import { colors } from "@/src/styles/colors";
-import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const s = StyleSheet.create({
     main: {
         flex: 1,
         flexDirection: 'column',
-        alignContent: 'flex-start',
+        alignContent: 'center',
+        justifyContent: 'flex-start',
         gap: 15,
     },
     headerBox: {
@@ -23,11 +24,17 @@ const s = StyleSheet.create({
         color: colors.secondary.dark.active
     },
     loginBox: {
-        maxWidth: '80%',
-        backgroundColor: colors.secondary.dark.default,
+        paddingHorizontal: 30,
+        gap: 15
     },
     inputBox: {
-
+        flexDirection: 'column',
+        gap: 5,
+    },
+    input: {
+        padding: 15,
+        minHeight: 60,
+        backgroundColor: colors.neutral[100],
     }
 
 })
@@ -50,7 +57,13 @@ const LoginPage = ({ navigation }) => {
 
                 <View style={s.loginBox}>
                     <View style={s.inputBox}>
+                        <Text>E-mail</Text>
+                        <TextInput style={s.input} placeholder="Informe seu e-mail." />
+                    </View>
 
+                    <View style={s.inputBox}>
+                        <Text>Senha:</Text>
+                        <TextInput style={s.input} placeholder="Informe sua senha" />
                     </View>
                 </View>
 

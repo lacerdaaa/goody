@@ -8,8 +8,6 @@ export default function RootLayout() {
   const Stack = createNativeStackNavigator()
   return (
     <NavigationIndependentTree>
-
-
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen options={{
